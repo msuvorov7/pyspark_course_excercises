@@ -5,10 +5,13 @@ from soda.scan import Scan
 
 @pytest.fixture(scope='session')
 def spark():
-    return SparkSession.builder \
-      .master("local") \
-      .appName("chispa") \
-      .getOrCreate()
+    return (
+        SparkSession
+        .builder
+        .master("local")
+        .appName("chispa")
+        .getOrCreate()
+    )
 
 
 def build_scan(name, spark_session):
