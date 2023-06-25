@@ -1,2 +1,2 @@
 checks for videos:
-  - row_count < 10
+  - row_count > 10
